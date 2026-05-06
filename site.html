@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Trivia Clash | Ultimate Quiz Battle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: white;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(34, 197, 94, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+        }
+
+        .neon-text {
+            color: #84cc16;
+            text-shadow: 0 0 15px rgba(132, 204, 22, 0.5);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+        }
+
+        .card-blur {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-register {
+            background: #84cc16;
+            color: #000;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(132, 204, 22, 0.3);
+        }
+
+        .btn-register:hover {
+            transform: scale(1.05) rotate(-1deg);
+            box-shadow: 0 0 30px rgba(132, 204, 22, 0.6);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .circuit-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 L90 10 L90 90 L10 90 Z' fill='none' stroke='rgba(34, 197, 94, 0.1)' stroke-width='0.5'/%3E%3Ccircle cx='10' cy='10' r='2' fill='rgba(34, 197, 94, 0.2)'/%3E%3C/svg%3E");
+        }
+
+        .profile-border {
+            border: 2px solid #84cc16;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body class="min-h-screen overflow-x-hidden circuit-bg">
+
+    <!-- Header / Navbar -->
+    <header class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="flex items-center gap-4">
+            <div class="bg-white text-black font-bold px-3 py-1 rounded text-xl italic">unstop</div>
+            <a href="https://unstop.com" class="text-gray-400 hover:text-white text-sm hidden md:flex items-center gap-2">
+                <i class="fas fa-home"></i> Go to Unstop Home page
+            </a>
+        </div>
+        <div class="text-right">
+            <h2 class="font-bold text-lg md:text-xl">Marwadi University</h2>
+            <p class="text-blue-400 text-xs md:text-sm font-semibold">(MU), Gujarat</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Left Column: Title -->
+        <div class="space-y-6">
+            <div class="flex items-center gap-2 text-yellow-400 font-bold tracking-widest uppercase text-sm">
+                <i class="far fa-lightbulb"></i>
+                <span>Innovation & Skill</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-black italic uppercase leading-none">
+                TECH TRIVIA<br>
+                <span class="neon-text">CLASH</span>
+                <i class="fas fa-bolt text-lime-500 ml-2"></i>
+            </h1>
+            
+            <div class="bg-white text-black inline-block px-4 py-1 text-2xl md:text-3xl font-black italic uppercase transform -skew-x-12">
+                Ultimate Quiz Battle
+            </div>
+
+            <p class="text-xl md:text-2xl font-bold italic text-gray-300">
+                THINK FAST. ANSWER SMART.<br>
+                <span class="text-lime-400">BE THE CHAMPION!</span>
+            </p>
+
+            <div class="bg-lime-500 text-black px-4 py-2 font-black text-center rounded-sm max-w-md transform -rotate-1">
+                3 EXCITING ROUNDS. 1 ULTIMATE CHAMPION!
+            </div>
+        </div>
+
+        <!-- Right Column: Visuals & Fast Info -->
+        <div class="relative flex flex-col items-center justify-center">
+            <div class="floating z-10">
+                <div class="relative">
+                    <i class="fas fa-trophy text-9xl text-yellow-400 drop-shadow-[0_0_40px_rgba(250,204,21,0.5)]"></i>
+                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 border-2 border-white px-8 py-2 rounded-xl transform rotate-3 shadow-2xl">
+                        <span class="font-black italic text-3xl">QUIZ <span class="text-lime-500">BATTLE</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 grid grid-cols-1 gap-4 w-full max-w-xs">
+                <div class="flex items-center gap-4 bg-slate-800/50 p-3 rounded-full border border-slate-700">
+                    <div class="w-10 h-10 rounded-full bg-lime-500/20 flex items-center justify-center text-lime-500">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span class="font-bold uppercase text-sm tracking-tight">Individual Participation</span>
+                </div>
+                <div class="flex items-center gap-4 bg-slate-800/50 p-3 rounded-full border border-slate-700">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <span class="font-bold uppercase text-sm tracking-tight">Online Event</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Timeline / Rounds Section -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Round 1 -->
+            <div class="card-blur p-6 rounded-2xl relative overflow-hidden group hover:border-blue-500 transition-colors">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="bg-blue-600 p-3 rounded-lg text-center min-w-[60px]">
+                        <div class="text-xl font-black leading-none">21</div>
+                        <div class="text-[10px] uppercase font-bold">May</div>
+                    </div>
+                    <i class="fas fa-question-circle text-2xl text-blue-400 opacity-50"></i>
+                </div>
+                <h3 class="text-blue-400 font-black uppercase text-xl mb-2">Quiz Round</h3>
+                <p class="text-xs text-gray-400 font-semibold mb-4 italic">
+                    21 MAY 26, 12:00 PM IST → 23 MAY 26, 11:00 PM IST
+                </p>
+                <div class="text-sm border-t border-slate-700 pt-4 text-gray-300">
+                    <span class="block font-bold mb-1">20 MCQs | 15 Minutes</span>
+                    Test your knowledge in programming, aptitude, logical reasoning and CS fundamentals.
+                </div>
+            </div>
+
+            <!-- Round 2 -->
+            <div class="card-blur p-6 rounded-2xl relative overflow-hidden group hover:border-lime-500 transition-colors">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="bg-lime-600 p-3 rounded-lg text-center min-w-[60px]">
+                        <div class="text-xl font-black leading-none">25</div>
+                        <div class="text-[10px] uppercase font-bold">May</div>
+                    </div>
+                    <i class="fas fa-file-alt text-2xl text-lime-400 opacity-50"></i>
+                </div>
+                <h3 class="text-lime-400 font-black uppercase text-xl mb-2">PPT Submission</h3>
+                <p class="text-xs text-gray-400 font-semibold mb-4 italic">
+                    25 MAY 26, 10:00 AM IST → 05 JUN 26, 10:00 AM IST
+                </p>
+                <div class="text-sm border-t border-slate-700 pt-4 text-gray-300">
+                    Submit your PPT on the given problem/topic through the Unstop platform.
+                </div>
+            </div>
+
+            <!-- Round 3 -->
+            <div class="card-blur p-6 rounded-2xl relative overflow-hidden group hover:border-purple-500 transition-colors">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="bg-purple-600 p-3 rounded-lg text-center min-w-[60px]">
+                        <div class="text-xl font-black leading-none">07</div>
+                        <div class="text-[10px] uppercase font-bold">Jun</div>
+                    </div>
+                    <i class="fas fa-video text-2xl text-purple-400 opacity-50"></i>
+                </div>
+                <h3 class="text-purple-400 font-black uppercase text-xl mb-2">Video Submission</h3>
+                <p class="text-xs text-gray-400 font-semibold mb-4 italic">
+                    07 JUN 26, 10:00 AM IST → 15 JUN 26, 10:00 AM IST
+                </p>
+                <div class="text-sm border-t border-slate-700 pt-4 text-gray-300">
+                    Submit a 3-5 min video explaining your approach, solution & key ideas.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="max-w-7xl mx-auto px-6 pb-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="text-center">
+                <i class="fas fa-trophy text-yellow-400 text-3xl mb-2"></i>
+                <p class="text-[10px] uppercase font-bold text-gray-400">Amazing Prizes</p>
+                <p class="font-black text-sm">FOR WINNERS!</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-gift text-lime-500 text-3xl mb-2"></i>
+                <p class="text-[10px] uppercase font-bold text-gray-400">Refer & Win</p>
+                <p class="font-black text-sm">EXCITING REWARDS!</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-bullseye text-red-500 text-3xl mb-2"></i>
+                <p class="text-[10px] uppercase font-bold text-gray-400">Challenge Yourself</p>
+                <p class="font-black text-sm">CLIMB THE LEADERBOARD!</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center md:items-end gap-6">
+            <h2 class="text-4xl italic font-black text-white uppercase tracking-tighter">Are you Ready?</h2>
+            <a href="https://unstop.com/p/tech-trivia-clash-ultimate-quiz-battle-marwadi-university-mu-gujarat-1681437" target="_blank" class="btn-register px-12 py-6 rounded-xl font-black text-2xl md:text-4xl uppercase flex items-center gap-4 relative">
+                CLICK HERE TO<br>REGISTER!
+                <i class="fas fa-mouse-pointer animate-bounce"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-black/40 py-10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            
+            <!-- Organizing Partners -->
+            <div class="flex flex-wrap items-center gap-8">
+                <!-- GFG Info -->
+                <div class="flex items-center gap-4 border-r border-slate-700 pr-8">
+                    <span class="text-gray-500 text-sm">Organized by</span>
+                    <div class="flex items-center gap-2">
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" alt="GFG" class="w-10 h-10 rounded-full">
+                        <div>
+                            <p class="font-bold text-sm">GeeksforGeeks</p>
+                            <p class="text-[10px] text-gray-400">Campus Ambassador</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coordinator Info (Meet Khakhkhar) -->
+                <div class="flex items-center gap-4">
+                    <img src="https://integrated-amethyst-pqbewxhahp.edgeone.app/unnamed.png" alt="Meet Khakhkhar" class="w-12 h-12 rounded-full profile-border object-cover shadow-lg">
+                    <div>
+                        <p class="font-bold text-sm text-lime-400">Meet Khakhkhar</p>
+                        <p class="text-[10px] text-gray-300 font-semibold uppercase tracking-wider">Campus Mantri @ MU</p>
+                        <p class="text-[10px] text-gray-500 uppercase">Event Coordinator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p class="text-gray-500 text-xs mb-1 font-bold">Marwadi University (MU), Gujarat</p>
+                <p class="text-gray-600 text-[10px]">© 2026 Tech Trivia Clash. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Interactive Hover Effects for Cards
+        document.querySelectorAll('.card-blur').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
